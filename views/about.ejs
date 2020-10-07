@@ -1,0 +1,45 @@
+<% include partials/header.ejs %>
+
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron col-xl-12">
+                <div class="container jumbopadded">
+                    <h1>Game of Thrones Text Mining</h1>
+                    <p>I made a project to do some Data Science and Machine Learning on a fun topic - Game of Thrones.
+
+                        <p>Soon I will write some more explanation about the code provided here:</p>
+                        </p>
+                        <div class="github-card" data-github="maxisses/GoT-Mining" data-width="400" data-height="150" data-theme="default"></div>
+                        <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+                        </div>
+                        On this page, there is a character classification based on IBM Watson Natural Language Classifier and a fake text generator based on a model called GPT-2 released by OpenAI last year and a wrapper for GPT-2 from Max Woolf. 
+                        Have Fun playing around - however, the infrastructure is not so resilient right now :)
+                        Especially the fake generator will take some time - in particular when multiple users are challenging the backend :).
+                        </p><p>
+                        Technologies used here:
+                        <ul>
+                            <li>
+                            IBM Watson Studio (among others, contains Jupyter-like environment on cloud infrastructure)
+                            </li><li>
+                            IBM Watson Machine Learning
+                            </li><li>
+                            Data Science OpenSource Stack (pandas, scikit, tensorflow, gpt2, nltk, Spacey)
+                            </li><li>
+                            IBM Watson Natural Language Classifier
+                            </li><li>
+                            Webpage: IBM Cloud - CF (Node.js, Express)
+                            </li><li>
+                            Text Gen Container: Google Run Stateless Containers
+                            </li>
+                        </ul>
+                    </p>
+                    </p>
+                        <p>
+                    <div class="img-thumbnail">
+                        <img class="img-fluid" alt="Responsive image" src ="got.png">
+                    </div>
+                </div>
+            </div>
+    </div>
+
+<% include partials/footer.ejs %>

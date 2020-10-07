@@ -1,0 +1,11 @@
+---
+applications:
+- instances: 1
+  timeout: 180
+  name: gameofthronesmining
+  buildpack: sdk-for-nodejs
+  command: npm start
+  disk_quota: 1G
+  memory: 256MB
+  domain: eu-de.mybluemix.net
+  host: game-of-thrones-mining

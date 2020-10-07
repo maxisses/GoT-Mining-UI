@@ -1,0 +1,12 @@
+node_modules/
+node_modules_linux/
+.github
+test/
+vcap-local.js
+.npm/
+.npm-global/
+Dockerfile
+Dockerfile-tools
+.git/
+.github/
+.gitignore

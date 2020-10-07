@@ -1,0 +1,13 @@
+<% include partials/header.ejs %>
+
+<!-- to make gpt2 pod address available in iframe, it needs to be set here via ejs notation -->
+<script>
+    var gpt2serviceaddress = "<%= gpt2serviceurl %>"          
+ </script>
+
+<div class="jumbotron" id="jumbopadded">
+    <iframe class="iframe" src="generatetext/generate_text.html" name="targetframe" frameborder="0" allowfullscreen>
+    </iframe>
+</div> 
+
+<% include partials/footer.ejs %>

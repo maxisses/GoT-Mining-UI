@@ -1,0 +1,53 @@
+<% include partials/header.ejs %>
+<div class="jumbotron" id="jumbopadded">
+    <div class="row">
+        <div class="col-md-10 col-sm-10">
+            <div style="margin: 40px auto">
+                <form action="/got" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="texttoclf" name="texttoclf" placeholder="Which GoT character could have said that?">
+                    </div>
+                    <div style="width: 30%" class="form-group">
+                        <button class="btn btn-sm btn-primary btn-block">Predict!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+            <div class="col-md-2 col-sm-2">
+                <img class="img-fluid" src="watsonicon.png">    
+            </div>
+        </div>
+    
+    <div class="row text-center" style="display: flex; flex-wrap: wrap">
+            <% for( var i = 0; i < predictions.length; i++){ %>
+                <%if (i == 0){ %>
+                    <h3 style="text-align: center">Who could have said ... <%= predictions[i].text %></h3>
+                    <iframe class="iframe2" frameborder="0" scrolling="no" src="<%= plotmeta[i].url %>/.embed"> </iframe>
+                <%}else{%>
+                <div class="col-md-6 col-sm-12" style="display:flex; flex-wrap: wrap">
+                    <div class="container">
+                        <h6><%= predictions[i].text %> </h6>
+                        <iframe width="400" height="300" frameborder="0" scrolling="no" src="<%= plotmeta[i].url %>/.embed"> </iframe>
+                    </div>
+                </div>
+            <% }} %>
+    </div>
+    </div>
+</div>
+
+
+<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+
+<script src="https://web-chat.global.assistant.watson.cloud.ibm.com/loadWatsonAssistantChat.js"></script>
+<script>
+  window.loadWatsonAssistantChat({
+    integrationID: "44c75208-db2d-4fc7-9245-f2ef42a740c1", // The ID of this integration.
+    region: "us-south" // The region your integration is hosted in.
+  }).then(function(instance){
+    instance.render();
+  });
+</script>
+
+
+
+<% include partials/footer.ejs %>

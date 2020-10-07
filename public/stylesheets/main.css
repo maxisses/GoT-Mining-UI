@@ -1,0 +1,60 @@
+.img-thumbnail {
+    padding: 0;
+}
+
+.img-responsive {
+    width: 100%;
+}
+
+.caption-full {
+    padding: 9px;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.navpane {
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    padding-top: 1em;
+  }
+  
+  
+  /* Links inside the navbar */
+  .navpane a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change background on mouse-over */
+  .navpane a:hover {
+    background: #ddd;
+    color: black;
+  }
+
+  .iframe {
+    width: 100%;
+    height: 81vh;
+  }
+
+  .iframe2 {
+    width: 90%;
+    height: 60vh;
+  }
+
+  #jumbopadded {
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+#thumbnail {
+  border: 0;
+  background-color: transparent;
+}
