@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/ubi8/nodejs-12
-RUN apk add --update python make g++\
-   && rm -rf /var/cache/apk/*
+RUN yum update\
+   && yum install python3
 WORKDIR /opt/app-root/src
 
 COPY package.json /opt/app-root/src
