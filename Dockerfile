@@ -1,6 +1,4 @@
-FROM registry.access.redhat.com/ubi8/nodejs-12
-RUN yum update\
-   && yum install python3
+FROM node:15.8.0-alpine3.11
 WORKDIR /opt/app-root/src
 
 COPY package.json /opt/app-root/src
