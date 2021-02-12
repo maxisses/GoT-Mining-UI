@@ -1,10 +1,8 @@
-FROM node:15.8-buster
-WORKDIR /app
+FROM registry.access.redhat.com/ubi8/nodejs-14
+WORKDIR /opt/app-root/src
 
-COPY package.json /app
+COPY package.json /opt/app-root/src
 RUN npm install --only=prod
-RUN addgroup -S gotmining && adduser -S max -G gotmining
-USER max
 COPY . .
 
 ENV NODE_ENV production
