@@ -1,4 +1,4 @@
-FROM node:12.20-stretch
+FROM node:15.8-buster
 WORKDIR /app
 
 COPY package.json /app
