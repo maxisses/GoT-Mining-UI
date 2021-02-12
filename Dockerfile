@@ -1,9 +1,9 @@
 FROM node:15.8.0-alpine3.11
-RUN addgroup -S gotmining && adduser -S max -G gotmining
 WORKDIR /app
 
 COPY package.json /app
 RUN npm install --only=prod
+RUN addgroup -S gotmining && adduser -S max -G gotmining
 USER max
 COPY . .
 
