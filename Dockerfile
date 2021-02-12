@@ -1,7 +1,8 @@
 FROM node:15.8.0-alpine3.11
-WORKDIR /opt/app-root/src
+USER max
+WORKDIR /app
 
-COPY package.json /opt/app-root/src
+COPY package.json /app
 RUN npm install --only=prod
 COPY . .
 
